@@ -19,8 +19,8 @@
         }
         #smallIframe {
             position: absolute;
-            width: 450px;
-            height: 350px;
+            width: 450px; /* Original width for larger screens */
+            height: 350px; /* Original height for larger screens */
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -89,7 +89,7 @@
             text-align: left;
             margin-top: 5px;
             margin-left: 20px;
-            margin-right: 50px;
+            margin-right: 20px; /* Adjusted margin for mobile */
         }
         #loginForm input {
             display: block;
@@ -131,8 +131,12 @@
         @media (max-width: 600px) {
             #smallIframe {
                 top: 30%; /* Adjust this value to move it higher */
-                width: 90%; /* Optional: make the width responsive */
-                height: auto; /* Optional: adjust height as needed */
+                width: 100%; /* Fill the width of the mobile frame */
+                height: auto; /* Adjust height as needed */
+            }
+            #loginForm {
+                margin-left: 10px; /* Optional: Adjust margins for mobile */
+                margin-right: 10px; /* Optional: Adjust margins for mobile */
             }
         }
     </style>
